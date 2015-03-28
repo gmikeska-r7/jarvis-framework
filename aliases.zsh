@@ -7,4 +7,4 @@ alias gs="git status"
 alias gadd="git add -p"
 alias gr="git remote"
 
-echo "Aliases loaded."
+catimg ~/scripts/metasploit2.png
