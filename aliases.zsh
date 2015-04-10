@@ -16,3 +16,5 @@ alias msfup="source msfup.zsh"
 alias proui="source proui.zsh"
 
 alias gcom="source gcom.zsh"
+
+alias gsig="source gsig.zsh"
