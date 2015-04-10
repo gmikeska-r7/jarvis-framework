@@ -11,3 +11,6 @@ alias workspace="source workspace.zsh"
 alias framework="source framework.zsh"
 alias pro="source pro.zsh"
 alias msfup="source msfup.zsh"
+
+
+alias proui="source proui.zsh"
