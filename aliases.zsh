@@ -1,3 +1,4 @@
+
 alias g="git"
 alias gp="git push"
 alias gpull="git pull"
@@ -6,5 +7,7 @@ alias gc="git checkout"
 alias gs="git status"
 alias gadd="git add -p"
 alias gr="git remote"
-
-catimg ~/scripts/metasploit2.png
+alias workspace="source workspace.zsh"
+alias framework="source framework.zsh"
+alias pro="source pro.zsh"
+alias msfup="source msfup.zsh"
