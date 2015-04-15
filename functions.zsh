@@ -22,3 +22,7 @@ lsscripts(){
 
 	popd
 }
+function psx
+{
+  ps aux | grep $1
+}
