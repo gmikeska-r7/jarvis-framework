@@ -1,4 +1,4 @@
 EDITOR=subl
-ALIAS_PATH=~/scripts/aliases.zsh
-FUNCTION_PATH=~/scripts/functions.zsh
-ICON=~/scripts/metasploit2.png
+ALIAS_PATH=$cwd'/aliases.zsh'
+FUNCTION_PATH=$cwd'/functions.zsh'
+ICON=$cwd'/metasploit2.png'
