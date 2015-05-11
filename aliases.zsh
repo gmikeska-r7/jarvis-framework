@@ -14,3 +14,7 @@ alias gcom="source gcom.zsh"
 alias gsig="source gsig.zsh"
 
 alias prosvc="rvmsudo ./prosvc.rb -E development"
+
+alias wifiOff="networksetup -setairportpower en0 off"
+
+alias wifiOn="networksetup -setairportpower en0 on"

@@ -1,0 +1,4 @@
+pro /Users/gmikeska/rapid7/pro
+framework /Users/gmikeska/rapid7/framework
+mocks /Users/gmikeska/rapid7/metasploit-pro-mocks
+proui /Users/gmikeska/rapid7/pro/ui

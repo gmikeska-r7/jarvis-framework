@@ -1,6 +1,11 @@
-test(){
-	source ~/scripts/test.zsh
+
+wifi(){
+
+	if [[ $1 = "on" ]] || [[ $1 = "off" ]]; then
+		networksetup -setairportpower en0 $1
+	fi
 }
+
 mkalias(){
 	print "\nalias $1=\"$@[2,-1]\"" >> $FRAMEWORK_ROOT/aliases.zsh
 }
@@ -41,7 +46,7 @@ runrepo(){
 msfup()
 {
 	if [[ $1 = "all" ]]; then
-		set -A GEMS "metasploit-concern" "metasploit-credential" "metasploit-yard" "metasploit_data_models" "metasploit-model"
+		set -A GEMS "metasploit-concern" "metasploit-credential" "metasploit-yard" "metasploit_data_models" "metasploit-model" "metasploit-cache"
 		for i in $GEMS
 		do
 
@@ -55,8 +60,8 @@ msfup()
 
 	pushd ~/rapid7/framework
 	git fetch --all
-	git pull upstream
-	git push origin
+	git pull upstream $(current_branch)
+	git push origin $(current_branch)
 	bundle
 
 	popd
@@ -78,12 +83,37 @@ branch()
 
 	if [[ $start_branch = $(current_branch) ]] && [[ $start_branch != $1 ]]
 		then git checkout -b $1
-		git push -set-upstream origin $1
+		git push --set-upstream origin $1
 	fi
 }
+
+#compdef branch=
 
 repo(){
 	COMMAND=$1
 	#DIR= pwd
 	print "$1 $PWD"  >> $FRAMEWORK_ROOT/repos.dat
+}
+
+mute(){
+
+	file="$FRAMEWORK_ROOT/aliases.zsh"
+set -A lines 
+	while read i
+	do
+
+		i=(${(ws:alias :)i})
+		i=(${(ws:=:)i})
+		echo $i[1]
+
+		lines+=$1
+
+	done < $file
+
+}
+
+chomp(){
+
+	string=$1
+    ${string// /}
 }
